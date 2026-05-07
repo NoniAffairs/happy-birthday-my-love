@@ -2,19 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Happy Birthday My Love</title>
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
+
+  <!-- CINEMATIC BACKGROUND GLOWS -->
+  <div class="bg-glow glow1"></div>
+  <div class="bg-glow glow2"></div>
+  <div class="bg-glow glow3"></div>
 
   <!-- MUSIC -->
   <audio id="bgMusic" loop>
@@ -22,61 +25,66 @@
   </audio>
 
   <button class="music-btn" onclick="toggleMusic()">
-    ♫ Our Song
+    ♫ Play Our Song
   </button>
 
-  <!-- HERO -->
-  <section class="hero">
+  <!-- HERO SECTION -->
+  <section class="hero parallax-section">
 
-    <div class="overlay"></div>
+    <div class="hero-overlay"></div>
 
-    <div class="hero-content">
+    <div class="hero-bg"></div>
 
-      <span class="hero-tag">
-        FOR MY BEAUTIFUL WIFE
+    <div class="hero-content fade-up">
+
+      <span class="small-text reveal-text">
+        For The Woman Who Changed Everything
       </span>
 
-      <h1>
+      <h1 class="cinematic-title">
         Some People Enter Your Life Quietly...
         <br>
         And Somehow Become Your Entire World.
       </h1>
 
-      <p>
+      <p class="hero-subtitle">
         Happy Birthday My Love ❤️
       </p>
 
-      <a href="#story" class="hero-btn">
-        Begin The Journey
+      <a href="#begin" class="hero-btn">
+        Begin This Journey
       </a>
 
     </div>
 
-  </section>
-
-  <!-- QUOTE -->
-  <section class="quote-section">
-
-    <div class="quote-box">
-      “There are moments in life...
-      that quietly become memories
-      you never want to lose.”
+    <div class="scroll-indicator">
+      <span></span>
     </div>
 
   </section>
 
-  <!-- STORY -->
-  <section class="section story-section" id="story">
+  <!-- EMOTIONAL HOOK -->
+  <section class="quote-section" id="begin">
 
-    <div class="story-image">
-      <img src="photo1.jpg" alt="">
+    <div class="quote-container fade-up">
+      <p>
+        “There are moments in life...
+        that quietly become memories you never want to lose.”
+      </p>
     </div>
 
-    <div class="story-content">
+  </section>
 
-      <span class="tag">
-        OUR STORY
-      </span>
+  <!-- STORY SECTION -->
+  <section class="section story-section parallax-section">
+
+    <div class="story-image cinematic-zoom">
+      <img src="photo1.jpg" alt="memory">
+    </div>
+
+    <div class="story-content fade-up">
+
+      <span class="tag">OUR STORY</span>
 
       <h2>
         Somehow...
@@ -86,27 +94,30 @@
       <p>
         Before you,
         life felt normal.
-      </p>
-
-      <p>
-        Then slowly...
-        your voice,
+        
+        Then slowly,
         your laughter,
-        your little habits,
-        and your presence
-        started becoming part of my safest place.
+        your voice,
+        your random little habits,
+        and your presence started becoming part of my safest place.
       </p>
 
       <p>
-        I still remember moments
-        that probably seemed small to everyone else...
+        I still remember moments that probably seemed small to everyone else...
         but meant everything to me.
+      </p>
+
+      <p>
+        The random conversations.
+        The way you smile when you're trying not to laugh.
+        The little arguments that somehow became memories we laugh about later.
       </p>
 
       <p>
         And honestly...
         after everything life has brought our way,
-        I still quietly thank God for you.
+        I still look at you sometimes
+        and quietly thank God for you.
       </p>
 
     </div>
@@ -114,128 +125,137 @@
   </section>
 
   <!-- LITTLE THINGS -->
-  <section class="quote-section dark">
+  <section class="quote-section dark-quote">
 
-    <div class="quote-box">
+    <div class="quote-container fade-up">
 
-      <span class="tag">
-        LITTLE THINGS I NEVER TOLD YOU
-      </span>
+      <span class="tag">LITTLE THINGS I NEVER TOLD YOU</span>
 
       <p>
         “I still get excited when I see your name pop up on my phone.”
       </p>
 
       <p>
-        “Your hugs still feel like home to me.”
+        “Sometimes I replay our old memories in my head when you are not even around.”
       </p>
 
       <p>
-        “And yes...
-        you still make my day better without even trying.”
+        “And somehow...
+        your hugs still feel like home to me.”
       </p>
 
     </div>
 
   </section>
 
-  <!-- GALLERY -->
-  <section class="section">
+  <!-- TRANSITION HOOK -->
+  <section class="quote-section dark-quote">
 
-    <div class="section-header">
-
-      <span class="tag">
-        OUR MEMORIES
-      </span>
-
-      <h2>
-        Moments I Never Want To Forget
-      </h2>
-
+    <div class="quote-container fade-up">
+      <p>
+        “And then suddenly...
+        ordinary moments started feeling magical.”
+      </p>
     </div>
 
-    <div class="gallery">
+  </section>
 
-      <img src="photo1.jpg">
-      <img src="photo2.jpg">
-      <img src="photo3.jpg">
-      <img src="photo4.jpg">
-      <img src="photo5.jpg">
-      <img src="photo6.jpg">
-      <img src="photo7.jpg">
-      <img src="photo8.jpg">
-      <img src="photo9.jpg">
-      <img src="photo10.jpg">
-      <img src="photo11.jpg">
-      <img src="photo12.jpg">
-      <img src="photo13.jpg">
-      <img src="photo14.jpg">
-      <img src="photo15.jpg">
-      <img src="photo16.jpg">
-      <img src="photo17.jpg">
-      <img src="photo18.jpg">
-      <img src="photo19.jpg">
-      <img src="photo20.jpg">
-      <img src="photo21.jpg">
-      <img src="photo22.jpg">
-      <img src="photo23.jpg">
-      <img src="photo24.jpg">
-      <img src="photo25.jpg">
-      <img src="photo26.jpg">
-      <img src="photo27.jpg">
-      <img src="photo28.jpg">
-      <img src="photo29.jpg">
-      <img src="photo30.jpg">
-      <img src="photo31.jpg">
-      <img src="photo32.jpg">
+  <!-- CINEMATIC GALLERY -->
+  <section class="section gallery-section">
+
+    <div class="section-heading fade-up">
+      <span class="tag">OUR MEMORIES</span>
+      <h2>Moments I Never Want To Forget</h2>
+    </div>
+
+    <div class="gallery cinematic-gallery">
+
+      <img src="photo1.jpg" alt="memory">
+      <img src="photo2.jpg" alt="memory">
+      <img src="photo3.jpg" alt="memory">
+      <img src="photo4.jpg" alt="memory">
+      <img src="photo5.jpg" alt="memory">
+      <img src="photo6.jpg" alt="memory">
+      <img src="photo7.jpg" alt="memory">
+      <img src="photo8.jpg" alt="memory">
+      <img src="photo9.jpg" alt="memory">
+      <img src="photo10.jpg" alt="memory">
+      <img src="photo11.jpg" alt="memory">
+      <img src="photo12.jpg" alt="memory">
+      <img src="photo13.jpg" alt="memory">
+      <img src="photo14.jpg" alt="memory">
+      <img src="photo15.jpg" alt="memory">
+      <img src="photo16.jpg" alt="memory">
+      <img src="photo17.jpg" alt="memory">
+      <img src="photo18.jpg" alt="memory">
+      <img src="photo19.jpg" alt="memory">
+      <img src="photo20.jpg" alt="memory">
+      <img src="photo21.jpg" alt="memory">
+      <img src="photo22.jpg" alt="memory">
+      <img src="photo23.jpg" alt="memory">
+      <img src="photo24.jpg" alt="memory">
+      <img src="photo25.jpg" alt="memory">
+      <img src="photo26.jpg" alt="memory">
+      <img src="photo27.jpg" alt="memory">
+      <img src="photo28.jpg" alt="memory">
+      <img src="photo29.jpg" alt="memory">
+      <img src="photo30.jpg" alt="memory">
+      <img src="photo31.jpg" alt="memory">
+      <img src="photo32.jpg" alt="memory">
 
     </div>
 
   </section>
 
-  <!-- LOVE SECTION -->
+  <!-- EMOTIONAL REVEAL -->
+  <section class="quote-section">
+
+    <div class="quote-container fade-up">
+      <p>
+        “The most beautiful thing about us...
+        is that after all this time,
+        my heart still pauses when I look at you.”
+      </p>
+    </div>
+
+  </section>
+
+  <!-- LOVE CARDS -->
   <section class="section">
 
-    <div class="section-header">
-
-      <span class="tag">
-        THINGS I LOVE ABOUT YOU
-      </span>
-
-      <h2>
-        The Little Things That Stay With Me
-      </h2>
-
+    <div class="section-heading fade-up">
+      <span class="tag">THINGS I LOVE ABOUT YOU</span>
+      <h2>The Little Things That Stay With Me</h2>
     </div>
 
     <div class="cards">
 
-      <div class="card">
+      <div class="card fade-up">
         <h3>Your Heart</h3>
         <p>
           You care deeply in ways most people never even notice.
         </p>
       </div>
 
-      <div class="card">
-        <h3>Your Presence</h3>
+      <div class="card fade-up">
+        <h3>Your Randomness</h3>
         <p>
-          Somehow you make difficult days feel lighter.
+          Even your little random moments somehow make life feel lighter.
         </p>
       </div>
 
-      <div class="card">
+      <div class="card fade-up">
         <h3>Your Strength</h3>
         <p>
-          Even in difficult seasons,
-          you continue to shine beautifully.
+          You keep showing up with strength even when things are not easy.
         </p>
       </div>
 
-      <div class="card">
-        <h3>Your Love</h3>
+      <div class="card fade-up">
+        <h3>Your Presence</h3>
         <p>
-          Loving you still feels like one of life’s greatest gifts.
+          Some days,
+          just having you around already makes everything feel better.
         </p>
       </div>
 
@@ -243,85 +263,89 @@
 
   </section>
 
-  <!-- LETTER -->
-  <section class="section letter-section">
+  <!-- HUMAN SECTION -->
+  <section class="quote-section">
 
-    <div class="section-header">
+    <div class="quote-container fade-up">
 
-      <span class="tag">
-        MY HEART TO YOURS
-      </span>
-
-      <h2>
-        A Letter For You
-      </h2>
-
-    </div>
-
-    <div class="letter-box">
-
-      <p class="letter">
-
-        My Love,
-        <br><br>
-
-        Thank you for being one of the best parts of my life.
-
-        <br><br>
-
-        Thank you for the prayers,
-        the support,
-        the patience,
-        the laughter,
-        and even the little moments
-        you probably don't realize mean so much to me.
-
-        <br><br>
-
-        I know we are not perfect.
-        We have had difficult moments.
-        We have had seasons that tested us.
-
-        <br><br>
-
-        But through all of it...
-        I still choose you.
-
-        <br><br>
-
-        Again.
-        And again.
-        And again.
-
-        <br><br>
-
-        I pray this new season brings you peace,
-        joy,
-        strength,
-        favor,
-        good health,
-        and beautiful surprises.
-
-        <br><br>
-
-        Happy Birthday My Queen ❤️
-
+      <p>
+        “We are not perfect.
+        But somehow...
+        loving you keeps making life feel worth fighting for.”
       </p>
 
     </div>
 
   </section>
 
-  <!-- FINAL -->
-  <section class="final-section">
+  <!-- LETTER SECTION -->
+  <section class="section letter-section parallax-section">
 
-    <div class="overlay"></div>
+    <div class="section-heading fade-up">
+      <span class="tag">MY HEART TO YOURS</span>
+      <h2>A Letter For You</h2>
+    </div>
 
-    <div class="final-content">
+    <div class="letter-box fade-up cinematic-zoom">
 
-      <span class="tag">
-        FOREVER
-      </span>
+      <p class="letter">
+        My Love,
+        <br><br>
+        Thank you for being one of the best parts of my life.
+        
+        Thank you for the prayers,
+        the support,
+        the patience,
+        the laughter,
+        and even the little moments you probably don't realize mean so much to me.
+        
+        I know we are not perfect.
+        We have had our difficult moments.
+        We have had seasons that tested us.
+        
+        But through all of it...
+        I still find myself choosing you.
+        
+        Again.
+        And again.
+        And again.
+        
+        I still smile remembering some of our random conversations.
+        I still laugh at some of the little things only we understand.
+        
+        And honestly...
+        I still look at you sometimes
+        and wonder how I got blessed with someone like you.
+        
+        I pray this new season brings you peace,
+        joy,
+        strength,
+        favor,
+        good health,
+        and beautiful surprises.
+        
+        No matter how many years pass,
+        I never want you to forget this:
+        
+        You are deeply loved.
+        
+        Happy Birthday My Queen ❤️
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- FINAL CINEMATIC ENDING -->
+  <section class="final-section parallax-section">
+
+    <div class="final-overlay"></div>
+
+    <div class="final-bg cinematic-zoom"></div>
+
+    <div class="final-content fade-up">
+
+      <span class="tag">FOREVER</span>
 
       <h2>
         And If I Had To Choose Again...
@@ -331,11 +355,14 @@
         I Would Still Choose You ❤️
       </h1>
 
+      <p>
+        Every single time.
+      </p>
+
     </div>
 
   </section>
 
   <script src="script.js"></script>
-
 </body>
 </html>
