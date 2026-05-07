@@ -14,9 +14,10 @@
 </head>
 <body>
 
-  <!-- BACKGROUND GLOW -->
+  <!-- CINEMATIC BACKGROUND GLOWS -->
   <div class="bg-glow glow1"></div>
   <div class="bg-glow glow2"></div>
+  <div class="bg-glow glow3"></div>
 
   <!-- MUSIC -->
   <audio id="bgMusic" loop>
@@ -24,29 +25,36 @@
   </audio>
 
   <button class="music-btn" onclick="toggleMusic()">
-    ♫ Music
+    ♫ Play Our Song
   </button>
 
-  <!-- HERO -->
-  <section class="hero">
+  <!-- HERO SECTION -->
+  <section class="hero parallax-section">
 
     <div class="hero-overlay"></div>
 
-    <div class="hero-content fade-up">
-      <span class="small-text">For My Beautiful Wife</span>
+    <div class="hero-bg"></div>
 
-      <h1>
-        To The Woman <br>
-        Who Changed My World
+    <div class="hero-content fade-up">
+
+      <span class="small-text reveal-text">
+        For The Woman Who Changed Everything
+      </span>
+
+      <h1 class="cinematic-title">
+        Some People Enter Your Life Quietly...
+        <br>
+        And Somehow Become Your Entire World.
       </h1>
 
-      <p>
+      <p class="hero-subtitle">
         Happy Birthday My Love ❤️
       </p>
 
-      <a href="#story" class="hero-btn">
-        Begin The Journey
+      <a href="#begin" class="hero-btn">
+        Begin This Journey
       </a>
+
     </div>
 
     <div class="scroll-indicator">
@@ -55,39 +63,76 @@
 
   </section>
 
-  <!-- STORY -->
-  <section class="section" id="story">
+  <!-- EMOTIONAL HOOK -->
+  <section class="quote-section" id="begin">
 
-    <div class="section-heading fade-up">
-      <span class="tag">OUR STORY</span>
-      <h2>Every Memory With You Feels Like Home</h2>
-    </div>
-
-    <div class="story-text fade-up">
+    <div class="quote-container fade-up">
       <p>
-        Every season with you has added beauty, peace, strength, and meaning to my life.
-        Through laughter, growth, challenges, and unforgettable moments,
-        you have remained one of the greatest gifts God has given me.
-      </p>
-
-      <p>
-        This is more than a birthday celebration.
-        This is a celebration of your heart, your love, your kindness,
-        and the beautiful woman you continue to become.
+        “There are moments in life...
+        that quietly become memories you never want to lose.”
       </p>
     </div>
 
   </section>
 
-  <!-- GALLERY -->
+  <!-- STORY SECTION -->
+  <section class="section story-section parallax-section">
+
+    <div class="story-image cinematic-zoom">
+      <img src="photo1.jpg" alt="memory">
+    </div>
+
+    <div class="story-content fade-up">
+
+      <span class="tag">OUR STORY</span>
+
+      <h2>
+        Loving You Changed
+        The Way My World Feels.
+      </h2>
+
+      <p>
+        Before you,
+        life moved normally.
+        
+        But somehow your presence brought warmth,
+        peace, laughter, beauty,
+        and a kind of love that words still struggle to explain.
+      </p>
+
+      <p>
+        And the beautiful thing is...
+        after every season,
+        every challenge,
+        every memory...
+        I still choose you.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- TRANSITION HOOK -->
+  <section class="quote-section dark-quote">
+
+    <div class="quote-container fade-up">
+      <p>
+        “And then suddenly...
+        ordinary moments started feeling magical.”
+      </p>
+    </div>
+
+  </section>
+
+  <!-- CINEMATIC GALLERY -->
   <section class="section gallery-section">
 
     <div class="section-heading fade-up">
-      <span class="tag">MEMORIES</span>
-      <h2>Beautiful Moments Together</h2>
+      <span class="tag">OUR MEMORIES</span>
+      <h2>Moments I Never Want To Forget</h2>
     </div>
 
-    <div class="gallery">
+    <div class="gallery cinematic-gallery">
 
       <img src="photo1.jpg" alt="memory">
       <img src="photo2.jpg" alt="memory">
@@ -126,12 +171,25 @@
 
   </section>
 
+  <!-- EMOTIONAL REVEAL -->
+  <section class="quote-section">
+
+    <div class="quote-container fade-up">
+      <p>
+        “The most beautiful thing about us...
+        is that after all this time,
+        my heart still pauses when I look at you.”
+      </p>
+    </div>
+
+  </section>
+
   <!-- LOVE CARDS -->
   <section class="section">
 
     <div class="section-heading fade-up">
       <span class="tag">WHY YOU ARE SPECIAL</span>
-      <h2>Reasons I Still Choose You</h2>
+      <h2>Things I Will Always Love About You</h2>
     </div>
 
     <div class="cards">
@@ -139,28 +197,29 @@
       <div class="card fade-up">
         <h3>Your Heart</h3>
         <p>
-          Your kindness and love make every space feel warm and safe.
+          You love deeply, genuinely, and beautifully.
         </p>
       </div>
 
       <div class="card fade-up">
         <h3>Your Strength</h3>
         <p>
-          Even in difficult moments, you continue to shine beautifully.
+          Even in difficult moments,
+          you continue to shine.
         </p>
       </div>
 
       <div class="card fade-up">
-        <h3>Your Smile</h3>
+        <h3>Your Presence</h3>
         <p>
-          Your smile still gives me peace in ways words cannot explain.
+          Somehow you make every moment feel lighter.
         </p>
       </div>
 
       <div class="card fade-up">
         <h3>Your Love</h3>
         <p>
-          Loving you continues to be one of life's greatest blessings.
+          Loving you still feels like one of life's greatest gifts.
         </p>
       </div>
 
@@ -168,46 +227,75 @@
 
   </section>
 
-  <!-- LETTER -->
-  <section class="section letter-section">
+  <!-- LETTER SECTION -->
+  <section class="section letter-section parallax-section">
 
     <div class="section-heading fade-up">
-      <span class="tag">MY LETTER TO YOU</span>
-      <h2>Happy Birthday My Queen</h2>
+      <span class="tag">MY HEART TO YOURS</span>
+      <h2>A Letter For You</h2>
     </div>
 
-    <div class="letter-box fade-up">
+    <div class="letter-box fade-up cinematic-zoom">
+
       <p class="letter">
         My Love,
         <br><br>
-        Thank you for your love, your patience, your prayers, and your beautiful presence in my life.
+        Thank you for being one of the best parts of my life.
         
-        Every year with you becomes another reminder that true love is not just spoken — it is lived.
+        Thank you for your patience,
+        your kindness,
+        your prayers,
+        your laughter,
+        and your beautiful soul.
         
-        I pray this new season of your life brings you peace, joy, favor, strength, good health, and beautiful surprises.
+        Every year with you feels like another chapter
+        of grace,
+        growth,
+        and beautiful memories.
         
-        No matter where life takes us,
-        I want you to always remember this:
+        I pray this new season of your life brings you peace,
+        joy,
+        favor,
+        good health,
+        and beautiful surprises.
         
-        I will keep choosing you.
+        And if life gave me another chance...
+        I would still find my way back to you.
+        
         Again.
         And again.
         And again.
         
-        Happy Birthday My Love ❤️
+        Happy Birthday My Queen ❤️
       </p>
+
     </div>
 
   </section>
 
-  <!-- FINAL -->
-  <section class="final-section">
+  <!-- FINAL CINEMATIC ENDING -->
+  <section class="final-section parallax-section">
 
     <div class="final-overlay"></div>
 
+    <div class="final-bg cinematic-zoom"></div>
+
     <div class="final-content fade-up">
-      <h2>And If I Had To Choose Again...</h2>
-      <h1>I Would Still Choose You ❤️</h1>
+
+      <span class="tag">FOREVER</span>
+
+      <h2>
+        And If I Had To Choose Again...
+      </h2>
+
+      <h1>
+        I Would Still Choose You ❤️
+      </h1>
+
+      <p>
+        Every single time.
+      </p>
+
     </div>
 
   </section>
