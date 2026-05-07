@@ -10,7 +10,7 @@ function toggleMusic() {
       musicLabel.textContent = 'Pause';
       musicIcon.style.animationPlayState = 'running';
     }).catch(err => {
-      console.log('Play failed:', err);
+      console.log('Play blocked:', err);
     });
   } else {
     music.pause();
@@ -42,7 +42,7 @@ window.addEventListener('scroll', () => {
   }
 }, { passive: true });
 
-/* SCROLL REVEAL — with mobile fallback */
+/* SCROLL REVEAL */
 const allReveal = document.querySelectorAll('.reveal-up, .reveal-item');
 
 function showAll() {
@@ -60,23 +60,22 @@ if ('IntersectionObserver' in window) {
   }, { threshold: 0.05, rootMargin: '0px 0px -20px 0px' });
 
   window.addEventListener('load', () => {
-    /* Hero fires on load */
+    /* Hero fires immediately on load */
     document.querySelectorAll('.hero .reveal-up').forEach(el => {
       const delay = parseFloat(getComputedStyle(el).getPropertyValue('--delay') || '0') * 1000;
       setTimeout(() => el.classList.add('visible'), delay);
     });
 
-    /* Everything else observed on scroll */
+    /* Everything else revealed on scroll */
     allReveal.forEach(el => {
       if (!el.closest('.hero')) observer.observe(el);
     });
   });
 
-  /* SAFETY NET — if anything still hidden after 3s, force show it */
+  /* Safety net — force show everything after 3 seconds */
   setTimeout(showAll, 3000);
 
 } else {
-  /* Older browsers — just show everything */
   showAll();
 }
 
