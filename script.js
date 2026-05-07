@@ -6,9 +6,12 @@ const musicIcon  = musicBtn.querySelector('.music-icon');
 
 function toggleMusic() {
   if (music.paused) {
-    music.play();
-    musicLabel.textContent = 'Pause';
-    musicIcon.style.animationPlayState = 'running';
+    music.play().then(() => {
+      musicLabel.textContent = 'Pause';
+      musicIcon.style.animationPlayState = 'running';
+    }).catch(err => {
+      console.log('Play failed:', err);
+    });
   } else {
     music.pause();
     musicLabel.textContent = 'Play';
