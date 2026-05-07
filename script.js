@@ -1,6 +1,6 @@
 /* MUSIC */
-const music     = document.getElementById('bgMusic');
-const musicBtn  = document.getElementById('musicBtn');
+const music      = document.getElementById('bgMusic');
+const musicBtn   = document.getElementById('musicBtn');
 const musicLabel = musicBtn.querySelector('.music-label');
 const musicIcon  = musicBtn.querySelector('.music-icon');
 
@@ -21,9 +21,8 @@ const heroBg      = document.getElementById('heroBg');
 const heroSection = document.getElementById('hero');
 
 window.addEventListener('scroll', () => {
-  const scrollY     = window.scrollY;
-  const heroHeight  = heroSection.offsetHeight;
-  if (scrollY < heroHeight * 1.2) {
+  const scrollY = window.scrollY;
+  if (scrollY < heroSection.offsetHeight * 1.2) {
     heroBg.style.transform = `scale(1.07) translateY(${scrollY * 0.32}px)`;
   }
 }, { passive: true });
@@ -40,30 +39,43 @@ window.addEventListener('scroll', () => {
   }
 }, { passive: true });
 
-/* SCROLL REVEAL */
-const revealEls = document.querySelectorAll('.reveal-up, .reveal-item');
+/* SCROLL REVEAL — with mobile fallback */
+const allReveal = document.querySelectorAll('.reveal-up, .reveal-item');
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      observer.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+function showAll() {
+  allReveal.forEach(el => el.classList.add('visible'));
+}
 
-window.addEventListener('load', () => {
-  /* Hero animates on load */
-  document.querySelectorAll('.hero .reveal-up').forEach(el => {
-    const delay = parseFloat(getComputedStyle(el).getPropertyValue('--delay') || '0') * 1000;
-    setTimeout(() => el.classList.add('visible'), delay);
+if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.05, rootMargin: '0px 0px -20px 0px' });
+
+  window.addEventListener('load', () => {
+    /* Hero fires on load */
+    document.querySelectorAll('.hero .reveal-up').forEach(el => {
+      const delay = parseFloat(getComputedStyle(el).getPropertyValue('--delay') || '0') * 1000;
+      setTimeout(() => el.classList.add('visible'), delay);
+    });
+
+    /* Everything else observed on scroll */
+    allReveal.forEach(el => {
+      if (!el.closest('.hero')) observer.observe(el);
+    });
   });
 
-  /* Everything else on scroll */
-  revealEls.forEach(el => {
-    if (!el.closest('.hero')) observer.observe(el);
-  });
-});
+  /* SAFETY NET — if anything still hidden after 3s, force show it */
+  setTimeout(showAll, 3000);
+
+} else {
+  /* Older browsers — just show everything */
+  showAll();
+}
 
 /* BOKEH PARTICLES */
 function createParticles() {
@@ -74,13 +86,12 @@ function createParticles() {
     p.className = 'particle';
     const size = Math.random() * 6 + 2;
     p.style.cssText = `
-      width: ${size}px;
-      height: ${size}px;
-      left: ${Math.random() * 100}%;
-      bottom: ${Math.random() * 30}%;
-      animation-delay: ${Math.random() * 10}s;
-      animation-duration: ${Math.random() * 12 + 10}s;
-      opacity: ${Math.random() * 0.5 + 0.1};
+      width:${size}px; height:${size}px;
+      left:${Math.random()*100}%;
+      bottom:${Math.random()*30}%;
+      animation-delay:${Math.random()*10}s;
+      animation-duration:${Math.random()*12+10}s;
+      opacity:${Math.random()*0.5+0.1};
     `;
     container.appendChild(p);
   }
@@ -89,18 +100,18 @@ function createParticles() {
 /* FLOATING HEARTS */
 function createHearts() {
   const container = document.getElementById('hearts');
-  const emojis    = ['❤️', '🤍', '✨', '💛', '🌸'];
-  const count     = window.innerWidth < 600 ? 10 : 18;
+  const emojis = ['❤️','🤍','✨','💛','🌸'];
+  const count = window.innerWidth < 600 ? 10 : 18;
   for (let i = 0; i < count; i++) {
     const h = document.createElement('div');
     h.className = 'floating-heart';
     h.textContent = emojis[Math.floor(Math.random() * emojis.length)];
     const size = Math.random() * 0.8 + 0.6;
     h.style.cssText = `
-      left: ${Math.random() * 100}%;
-      font-size: ${size}rem;
-      animation-delay: ${Math.random() * 12}s;
-      animation-duration: ${Math.random() * 10 + 12}s;
+      left:${Math.random()*100}%;
+      font-size:${size}rem;
+      animation-delay:${Math.random()*12}s;
+      animation-duration:${Math.random()*10+12}s;
     `;
     container.appendChild(h);
   }
@@ -131,11 +142,9 @@ document.querySelectorAll('.gallery-item img').forEach(img => {
   });
 });
 
-/* INJECT LIGHTBOX KEYFRAME */
 const s = document.createElement('style');
 s.textContent = `@keyframes lbIn { from { opacity:0 } to { opacity:1 } }`;
 document.head.appendChild(s);
 
-/* INIT */
 createParticles();
 createHearts();
