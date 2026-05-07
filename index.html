@@ -4,363 +4,270 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Happy Birthday My Love</title>
-
   <link rel="stylesheet" href="style.css" />
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Raleway:wght@200;300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- CINEMATIC BACKGROUND GLOWS -->
-  <div class="bg-glow glow1"></div>
-  <div class="bg-glow glow2"></div>
-  <div class="bg-glow glow3"></div>
+  <div class="grain"></div>
 
-  <!-- MUSIC -->
   <audio id="bgMusic" loop>
     <source src="music.mp3" type="audio/mp3">
   </audio>
 
-  <button class="music-btn" onclick="toggleMusic()">
-    ♫ Play Our Song
-  </button>
+  <div class="music-wrapper">
+    <div class="music-indicator">
+      ❤️ Tap here to play our song.<br>
+      Every time I hear this song,<br>
+      I still think about us.
+    </div>
+    <button class="music-btn" id="musicBtn" onclick="toggleMusic()">
+      <span class="music-icon">♫</span>
+      <span class="music-label">Our Song</span>
+    </button>
+  </div>
 
-  <!-- HERO SECTION -->
-  <section class="hero parallax-section">
-
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg" id="heroBg"></div>
     <div class="hero-overlay"></div>
-
-    <div class="hero-bg"></div>
-
-    <div class="hero-content fade-up">
-
-      <span class="small-text reveal-text">
-        For The Woman Who Changed Everything
-      </span>
-
-      <h1 class="cinematic-title">
-        Some People Enter Your Life Quietly...
-        <br>
-        And Somehow Become Your Entire World.
+    <div class="hero-vignette"></div>
+    <div class="particles" id="particles"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow reveal-up" style="--delay: 0.3s">For The Woman Who Changed Everything</p>
+      <h1 class="hero-title reveal-up" style="--delay: 0.7s">
+        Some People Enter<br>
+        Your Life Quietly...<br>
+        <em>And Somehow Become<br>Your Entire World.</em>
       </h1>
-
-      <p class="hero-subtitle">
-        Happy Birthday My Love ❤️
-      </p>
-
-      <a href="#begin" class="hero-btn">
-        Begin This Journey
-      </a>
-
+      <div class="hero-divider reveal-up" style="--delay: 1.1s"></div>
+      <p class="hero-sub reveal-up" style="--delay: 1.4s">Happy Birthday, My Love ❤️</p>
+      <a href="#begin" class="hero-btn reveal-up" style="--delay: 1.8s">Begin This Journey</a>
+      <div class="scroll-hint reveal-up" style="--delay: 2.1s">
+        <span></span>
+        <p>Scroll</p>
+      </div>
     </div>
-
-    <div class="scroll-indicator">
-      <span></span>
-    </div>
-
   </section>
 
   <!-- EMOTIONAL HOOK -->
   <section class="quote-section" id="begin">
-
-    <div class="quote-container fade-up">
-      <p>
-        “There are moments in life...
-        that quietly become memories you never want to lose.”
+    <div class="quote-container">
+      <p class="reveal-item">
+        "There are moments in life...<br>
+        that quietly become memories you never want to lose."
       </p>
     </div>
-
   </section>
 
   <!-- STORY SECTION -->
-  <section class="section story-section parallax-section">
-
-    <div class="story-image cinematic-zoom">
+  <section class="section story-section">
+    <div class="story-image reveal-item">
       <img src="photo1.jpg" alt="memory">
     </div>
-
-    <div class="story-content fade-up">
-
-      <span class="tag">OUR STORY</span>
-
-      <h2>
-        Somehow...
-        You Became My Favorite Part Of Life.
+    <div class="story-content">
+      <span class="section-label reveal-item">Our Story</span>
+      <h2 class="section-title reveal-item">
+        Somehow...<br>
+        <em>You Became My Favorite<br>Part Of Life.</em>
       </h2>
-
-      <p>
-        Before you,
-        life felt normal.
-        
-        Then slowly,
-        your laughter,
-        your voice,
-        your random little habits,
+      <p class="section-text reveal-item">
+        Before you, life felt normal.<br><br>
+        Then slowly, your laughter, your voice, your random little habits,
         and your presence started becoming part of my safest place.
       </p>
-
-      <p>
+      <p class="section-text reveal-item">
         I still remember moments that probably seemed small to everyone else...
         but meant everything to me.
       </p>
-
-      <p>
-        The random conversations.
-        The way you smile when you're trying not to laugh.
+      <p class="section-text reveal-item">
+        The random conversations. The way you smile when you're trying not to laugh.
         The little arguments that somehow became memories we laugh about later.
       </p>
-
-      <p>
-        And honestly...
-        after everything life has brought our way,
-        I still look at you sometimes
-        and quietly thank God for you.
+      <p class="section-text reveal-item">
+        And honestly... after everything life has brought our way,
+        I still look at you sometimes and quietly thank God for you.
       </p>
-
     </div>
-
   </section>
 
   <!-- LITTLE THINGS -->
   <section class="quote-section dark-quote">
-
-    <div class="quote-container fade-up">
-
-      <span class="tag">LITTLE THINGS I NEVER TOLD YOU</span>
-
-      <p>
-        “I still get excited when I see your name pop up on my phone.”
-      </p>
-
-      <p>
-        “Sometimes I replay our old memories in my head when you are not even around.”
-      </p>
-
-      <p>
-        “And somehow...
-        your hugs still feel like home to me.”
-      </p>
-
+    <div class="quote-container">
+      <span class="section-label reveal-item">Little Things I Never Told You</span>
+      <p class="reveal-item">"I still get excited when I see your name pop up on my phone."</p>
+      <p class="reveal-item">"Sometimes I replay our old memories in my head when you're not even around."</p>
+      <p class="reveal-item">"And somehow... your hugs still feel like home to me."</p>
     </div>
-
   </section>
 
-  <!-- TRANSITION HOOK -->
-  <section class="quote-section dark-quote">
-
-    <div class="quote-container fade-up">
-      <p>
-        “And then suddenly...
-        ordinary moments started feeling magical.”
+  <!-- TRANSITION -->
+  <section class="quote-section">
+    <div class="quote-container">
+      <p class="reveal-item">
+        "And then suddenly...<br>
+        ordinary moments started feeling magical."
       </p>
     </div>
-
   </section>
 
-  <!-- CINEMATIC GALLERY -->
+  <!-- GALLERY -->
   <section class="section gallery-section">
-
-    <div class="section-heading fade-up">
-      <span class="tag">OUR MEMORIES</span>
-      <h2>Moments I Never Want To Forget</h2>
+    <div class="section-inner">
+      <span class="section-label reveal-item">Our Memories</span>
+      <h2 class="section-title reveal-item">Moments I Never Want To Forget</h2>
     </div>
-
-    <div class="gallery cinematic-gallery">
-
-      <img src="photo1.jpg" alt="memory">
-      <img src="photo2.jpg" alt="memory">
-      <img src="photo3.jpg" alt="memory">
-      <img src="photo4.jpg" alt="memory">
-      <img src="photo5.jpg" alt="memory">
-      <img src="photo6.jpg" alt="memory">
-      <img src="photo7.jpg" alt="memory">
-      <img src="photo8.jpg" alt="memory">
-      <img src="photo9.jpg" alt="memory">
-      <img src="photo10.jpg" alt="memory">
-      <img src="photo11.jpg" alt="memory">
-      <img src="photo12.jpg" alt="memory">
-      <img src="photo13.jpg" alt="memory">
-      <img src="photo14.jpg" alt="memory">
-      <img src="photo15.jpg" alt="memory">
-      <img src="photo16.jpg" alt="memory">
-      <img src="photo17.jpg" alt="memory">
-      <img src="photo18.jpg" alt="memory">
-      <img src="photo19.jpg" alt="memory">
-      <img src="photo20.jpg" alt="memory">
-      <img src="photo21.jpg" alt="memory">
-      <img src="photo22.jpg" alt="memory">
-      <img src="photo23.jpg" alt="memory">
-      <img src="photo24.jpg" alt="memory">
-      <img src="photo25.jpg" alt="memory">
-      <img src="photo26.jpg" alt="memory">
-      <img src="photo27.jpg" alt="memory">
-      <img src="photo28.jpg" alt="memory">
-      <img src="photo29.jpg" alt="memory">
-      <img src="photo30.jpg" alt="memory">
-      <img src="photo31.jpg" alt="memory">
-      <img src="photo32.jpg" alt="memory">
-
+    <div class="gallery reveal-item">
+      <div class="gallery-track">
+        <div class="gallery-item"><img src="photo1.jpg" alt="memory"></div>
+        <div class="gallery-item"><img src="photo2.jpg" alt="memory"></div>
+        <div class="gallery-item"><img src="photo3.jpg" alt="memory"></div>
+        <div class="gallery-item"><img src="photo4.jpg" alt="memory"></div>
+        <div class="gallery-item"><img src="photo5.jpg" alt="memory"></div>
+        <div class="gallery-item"><img src="photo6.jpg" alt="memory"></div>
+        <div class="gallery-item"><img src="photo7.jpg" alt="memory"></div>
+        <div class="gallery-item"><img src="photo8.jpg" alt="memory"></div>
+        <div class="gallery-item"><img src="photo9.jpg" alt="memory"></div>
+        <div class="gallery-item"><img src="photo10.jpg" alt="memory"></div>
+        <div class="gallery-item"><img src="photo11.jpg" alt="memory"></div>
+        <div class="gallery-item"><img src="photo12.jpg" alt="memory"></div>
+        <div class="gallery-item"><img src="photo13.jpg" alt="memory"></div>
+        <div class="gallery-item"><img src="photo14.jpg" alt="memory"></div>
+        <div class="gallery-item"><img src="photo15.jpg" alt="memory"></div>
+        <div class="gallery-item"><img src="photo16.jpg" alt="memory"></div>
+        <div class="gallery-item"><img src="photo17.jpg" alt="memory"></div>
+        <div class="gallery-item"><img src="photo18.jpg" alt="memory"></div>
+        <div class="gallery-item"><img src="photo19.jpg" alt="memory"></div>
+        <div class="gallery-item"><img src="photo20.jpg" alt="memory"></div>
+        <div class="gallery-item"><img src="photo21.jpg" alt="memory"></div>
+        <div class="gallery-item"><img src="photo22.jpg" alt="memory"></div>
+        <div class="gallery-item"><img src="photo23.jpg" alt="memory"></div>
+        <div class="gallery-item"><img src="photo24.jpg" alt="memory"></div>
+        <div class="gallery-item"><img src="photo25.jpg" alt="memory"></div>
+        <div class="gallery-item"><img src="photo26.jpg" alt="memory"></div>
+        <div class="gallery-item"><img src="photo27.jpg" alt="memory"></div>
+        <div class="gallery-item"><img src="photo28.jpg" alt="memory"></div>
+        <div class="gallery-item"><img src="photo29.jpg" alt="memory"></div>
+        <div class="gallery-item"><img src="photo30.jpg" alt="memory"></div>
+        <div class="gallery-item"><img src="photo31.jpg" alt="memory"></div>
+        <div class="gallery-item"><img src="photo32.jpg" alt="memory"></div>
+      </div>
     </div>
-
   </section>
 
   <!-- EMOTIONAL REVEAL -->
   <section class="quote-section">
-
-    <div class="quote-container fade-up">
-      <p>
-        “The most beautiful thing about us...
-        is that after all this time,
-        my heart still pauses when I look at you.”
+    <div class="quote-container">
+      <p class="reveal-item">
+        "The most beautiful thing about us...<br>
+        is that after all this time,<br>
+        my heart still pauses when I look at you."
       </p>
     </div>
-
   </section>
 
   <!-- LOVE CARDS -->
-  <section class="section">
-
-    <div class="section-heading fade-up">
-      <span class="tag">THINGS I LOVE ABOUT YOU</span>
-      <h2>The Little Things That Stay With Me</h2>
+  <section class="section reasons-section">
+    <div class="section-inner">
+      <span class="section-label reveal-item">Things I Love About You</span>
+      <h2 class="section-title reveal-item">The Little Things That Stay With Me</h2>
     </div>
-
     <div class="cards">
-
-      <div class="card fade-up">
+      <div class="card reveal-item" style="--card-delay: 0s">
+        <div class="card-number">01</div>
         <h3>Your Heart</h3>
-        <p>
-          You care deeply in ways most people never even notice.
-        </p>
+        <p>You care deeply in ways most people never even notice.</p>
       </div>
-
-      <div class="card fade-up">
+      <div class="card reveal-item" style="--card-delay: 0.12s">
+        <div class="card-number">02</div>
         <h3>Your Randomness</h3>
-        <p>
-          Even your little random moments somehow make life feel lighter.
-        </p>
+        <p>Even your little random moments somehow make life feel lighter.</p>
       </div>
-
-      <div class="card fade-up">
+      <div class="card reveal-item" style="--card-delay: 0.24s">
+        <div class="card-number">03</div>
         <h3>Your Strength</h3>
-        <p>
-          You keep showing up with strength even when things are not easy.
-        </p>
+        <p>You keep showing up with strength even when things are not easy.</p>
       </div>
-
-      <div class="card fade-up">
+      <div class="card reveal-item" style="--card-delay: 0.36s">
+        <div class="card-number">04</div>
         <h3>Your Presence</h3>
-        <p>
-          Some days,
-          just having you around already makes everything feel better.
-        </p>
+        <p>Some days, just having you around already makes everything feel better.</p>
       </div>
-
     </div>
-
   </section>
 
-  <!-- HUMAN SECTION -->
+  <!-- HUMAN -->
   <section class="quote-section">
-
-    <div class="quote-container fade-up">
-
-      <p>
-        “We are not perfect.
-        But somehow...
-        loving you keeps making life feel worth fighting for.”
+    <div class="quote-container">
+      <p class="reveal-item">
+        "We are not perfect.<br>
+        But somehow...<br>
+        loving you keeps making life feel worth fighting for."
       </p>
-
     </div>
-
   </section>
 
-  <!-- LETTER SECTION -->
-  <section class="section letter-section parallax-section">
-
-    <div class="section-heading fade-up">
-      <span class="tag">MY HEART TO YOURS</span>
-      <h2>A Letter For You</h2>
+  <!-- LETTER -->
+  <section class="section letter-section">
+    <div class="letter-bg"></div>
+    <div class="section-inner">
+      <span class="section-label reveal-item">My Heart To Yours</span>
+      <h2 class="section-title reveal-item">A Letter For You</h2>
+      <div class="letter-wrap reveal-item">
+        <div class="letter-ornament top">❝</div>
+        <p class="letter">
+          My Love,
+          <br><br>
+          Thank you for being one of the best parts of my life.
+          <br><br>
+          Thank you for the prayers, the support, the patience,
+          the laughter, and even the little moments you probably
+          don't realize mean so much to me.
+          <br><br>
+          I know we are not perfect.
+          We have had our difficult moments.
+          We have had seasons that tested us.
+          <br><br>
+          But through all of it...<br>
+          I still find myself choosing you.<br><br>
+          Again.<br>
+          And again.<br>
+          And again.
+          <br><br>
+          I still smile remembering some of our random conversations.
+          I still laugh at the little things only we understand.
+          <br><br>
+          And honestly... I still look at you sometimes
+          and wonder how I got blessed with someone like you.
+          <br><br>
+          I pray this new season brings you peace, joy, strength,
+          favour, good health, and beautiful surprises.
+          <br><br>
+          No matter how many years pass,
+          I never want you to forget this:
+          <br><br>
+          <em>You are deeply loved.</em>
+        </p>
+        <div class="letter-signature">Happy Birthday, My Queen ❤️</div>
+        <div class="letter-ornament bottom">❞</div>
+      </div>
     </div>
-
-    <div class="letter-box fade-up cinematic-zoom">
-
-      <p class="letter">
-        My Love,
-        <br><br>
-        Thank you for being one of the best parts of my life.
-        
-        Thank you for the prayers,
-        the support,
-        the patience,
-        the laughter,
-        and even the little moments you probably don't realize mean so much to me.
-        
-        I know we are not perfect.
-        We have had our difficult moments.
-        We have had seasons that tested us.
-        
-        But through all of it...
-        I still find myself choosing you.
-        
-        Again.
-        And again.
-        And again.
-        
-        I still smile remembering some of our random conversations.
-        I still laugh at some of the little things only we understand.
-        
-        And honestly...
-        I still look at you sometimes
-        and wonder how I got blessed with someone like you.
-        
-        I pray this new season brings you peace,
-        joy,
-        strength,
-        favor,
-        good health,
-        and beautiful surprises.
-        
-        No matter how many years pass,
-        I never want you to forget this:
-        
-        You are deeply loved.
-        
-        Happy Birthday My Queen ❤️
-      </p>
-
-    </div>
-
   </section>
 
-  <!-- FINAL CINEMATIC ENDING -->
-  <section class="final-section parallax-section">
-
+  <!-- FINAL -->
+  <section class="final-section">
+    <div class="final-bg" id="finalBg"></div>
     <div class="final-overlay"></div>
-
-    <div class="final-bg cinematic-zoom"></div>
-
-    <div class="final-content fade-up">
-
-      <span class="tag">FOREVER</span>
-
-      <h2>
-        And If I Had To Choose Again...
-      </h2>
-
-      <h1>
-        I Would Still Choose You ❤️
-      </h1>
-
-      <p>
-        Every single time.
-      </p>
-
+    <div class="floating-hearts" id="hearts"></div>
+    <div class="final-content">
+      <span class="section-label reveal-up">Forever</span>
+      <h2 class="final-eyebrow reveal-up">And If I Had To Choose Again...</h2>
+      <h1 class="final-title reveal-up">I Would Still<br><em>Choose You</em></h1>
+      <p class="final-sub reveal-up">Every single time.</p>
+      <p class="final-heart reveal-up">❤️</p>
     </div>
-
   </section>
 
   <script src="script.js"></script>
