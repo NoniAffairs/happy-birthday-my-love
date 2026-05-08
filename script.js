@@ -19,14 +19,18 @@ function toggleMusic() {
   }
 }
 
-/* VIDEO — controls appear after tap */
+/* VIDEO — overlay removed from DOM so controls are fully touchable */
 function playVideo() {
   const video   = document.getElementById('loveVideo');
   const overlay = document.getElementById('videoOverlay');
+
+  video.controls = true;
+
   video.play().then(() => {
-    overlay.classList.add('hidden');
-    video.setAttribute('controls', true);
+    overlay.remove();
   }).catch(err => {
+    overlay.remove();
+    video.controls = true;
     console.log('Video play blocked:', err);
   });
 }
