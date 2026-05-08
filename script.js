@@ -19,6 +19,17 @@ function toggleMusic() {
   }
 }
 
+/* VIDEO */
+function playVideo() {
+  const video   = document.getElementById('loveVideo');
+  const overlay = document.getElementById('videoOverlay');
+  video.play().then(() => {
+    overlay.classList.add('hidden');
+  }).catch(err => {
+    console.log('Video play blocked:', err);
+  });
+}
+
 /* HERO PARALLAX */
 const heroBg      = document.getElementById('heroBg');
 const heroSection = document.getElementById('hero');
@@ -61,7 +72,9 @@ if ('IntersectionObserver' in window) {
 
   window.addEventListener('load', () => {
     document.querySelectorAll('.hero .reveal-up').forEach(el => {
-      const delay = parseFloat(getComputedStyle(el).getPropertyValue('--delay') || '0') * 1000;
+      const delay = parseFloat(
+        getComputedStyle(el).getPropertyValue('--delay') || '0'
+      ) * 1000;
       setTimeout(() => el.classList.add('visible'), delay);
     });
     allReveal.forEach(el => {
@@ -99,7 +112,7 @@ function createParticles() {
 function createHearts() {
   const container = document.getElementById('hearts');
   const emojis = ['❤️','🤍','✨','💛','🌸'];
-  const count = window.innerWidth < 600 ? 10 : 18;
+  const count  = window.innerWidth < 600 ? 10 : 18;
   for (let i = 0; i < count; i++) {
     const h = document.createElement('div');
     h.className = 'floating-heart';
