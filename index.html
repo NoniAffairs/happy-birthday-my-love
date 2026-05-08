@@ -212,6 +212,36 @@
     </div>
   </section>
 
+  <!-- VIDEO MESSAGE -->
+  <section class="section video-section">
+    <div class="section-inner">
+      <span class="section-label reveal-item">A Message From My Heart</span>
+      <h2 class="section-title reveal-item">
+        I Wanted You To<br>
+        <em>Hear This From Me.</em>
+      </h2>
+      <p class="section-text reveal-item">
+        No words on a screen could ever say this the way I wanted to.<br>
+        So I recorded this just for you.
+      </p>
+    </div>
+    <div class="video-wrap reveal-item">
+      <video
+        id="loveVideo"
+        src="message.mp4"
+        playsinline
+        preload="metadata"
+        poster="photo1.jpg"
+      ></video>
+      <div class="video-overlay" id="videoOverlay" onclick="playVideo()">
+        <div class="play-btn">
+          <span>▶</span>
+        </div>
+        <p class="video-prompt">Tap to watch my message</p>
+      </div>
+    </div>
+  </section>
+
   <!-- LETTER -->
   <section class="section letter-section">
     <div class="letter-bg"></div>
