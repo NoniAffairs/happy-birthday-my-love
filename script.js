@@ -49,7 +49,7 @@ window.addEventListener('scroll', () => {
   const rect = finalSection.getBoundingClientRect();
   if (rect.top < window.innerHeight && rect.bottom > 0) {
     const progress = 1 - (rect.bottom / (window.innerHeight + rect.height));
-    finalBg.style.transform = `scale(1.07) translateY(${progress * -45}px)`;
+    finalBg.style.transform = `scale(1.07) translateY(${progress * -40}px)`;
   }
 }, { passive: true });
 
