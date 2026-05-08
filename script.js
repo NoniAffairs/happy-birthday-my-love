@@ -19,12 +19,13 @@ function toggleMusic() {
   }
 }
 
-/* VIDEO */
+/* VIDEO — controls appear after tap */
 function playVideo() {
   const video   = document.getElementById('loveVideo');
   const overlay = document.getElementById('videoOverlay');
   video.play().then(() => {
     overlay.classList.add('hidden');
+    video.setAttribute('controls', true);
   }).catch(err => {
     console.log('Video play blocked:', err);
   });
