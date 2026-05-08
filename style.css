@@ -160,8 +160,8 @@ body {
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(0,0,0,0.15) 0%,
-    rgba(0,0,0,0.52) 50%,
+    rgba(0,0,0,0.25) 0%,
+    rgba(0,0,0,0.55) 50%,
     rgba(8,8,8,1) 100%
   );
 }
@@ -176,30 +176,34 @@ body {
   position: relative;
   z-index: 2;
   text-align: center;
-  padding: 24px;
-  max-width: 960px;
+  padding: 24px 30px;
+  max-width: 900px;
+  width: 100%;
 }
 
 .hero-eyebrow {
   font-family: 'Raleway', sans-serif;
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   font-weight: 400;
-  letter-spacing: 0.32em;
+  letter-spacing: 0.28em;
   text-transform: uppercase;
   color: var(--gold);
-  margin-bottom: 32px;
+  margin-bottom: 28px;
   display: block;
 }
 
+/* =============================================
+   FIX 1 — Hero title smaller on mobile
+   ============================================= */
 .hero-title {
   font-family: 'Bodoni Moda', serif;
-  font-size: clamp(2.6rem, 8vw, 7rem);
+  font-size: clamp(1.75rem, 5.5vw, 5.5rem);
   font-weight: 900;
   font-optical-sizing: auto;
-  line-height: 1.08;
+  line-height: 1.12;
   color: var(--white);
-  margin-bottom: 36px;
-  letter-spacing: -0.02em;
+  margin-bottom: 32px;
+  letter-spacing: -0.01em;
 }
 
 .hero-title em {
@@ -207,36 +211,36 @@ body {
   font-style: italic;
   font-weight: 700;
   color: var(--gold);
-  font-size: 1.08em;
+  font-size: 1.06em;
   letter-spacing: 0.01em;
   display: block;
 }
 
 .hero-divider {
-  width: 55px;
+  width: 50px;
   height: 1px;
   background: linear-gradient(to right, transparent, var(--gold), transparent);
-  margin: 0 auto 30px;
+  margin: 0 auto 28px;
 }
 
 .hero-sub {
   font-family: 'Cormorant', serif;
-  font-size: clamp(1.15rem, 2.8vw, 1.65rem);
+  font-size: clamp(1rem, 2.5vw, 1.55rem);
   font-weight: 600;
   font-style: italic;
   color: var(--white-dim);
   letter-spacing: 0.04em;
-  margin-bottom: 40px;
+  margin-bottom: 36px;
 }
 
 .hero-btn {
   display: inline-block;
   border: 1px solid rgba(226,194,125,0.5);
   color: var(--gold);
-  padding: 14px 36px;
+  padding: 13px 32px;
   border-radius: 40px;
   font-family: 'Raleway', sans-serif;
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   font-weight: 500;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -251,7 +255,7 @@ body {
 }
 
 .scroll-hint {
-  margin-top: 60px;
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -261,13 +265,13 @@ body {
 .scroll-hint span {
   display: block;
   width: 1px;
-  height: 48px;
+  height: 44px;
   background: linear-gradient(to bottom, var(--gold), transparent);
   animation: scrollLine 1.9s var(--ease-cinema) infinite;
 }
 
 .scroll-hint p {
-  font-size: 0.62rem;
+  font-size: 0.6rem;
   letter-spacing: 0.26em;
   text-transform: uppercase;
   color: rgba(255,255,255,0.3);
@@ -304,7 +308,7 @@ body {
 
 /* QUOTE SECTIONS */
 .quote-section {
-  padding: clamp(80px, 12vw, 130px) clamp(24px, 10%, 160px);
+  padding: clamp(70px, 11vw, 120px) clamp(24px, 10%, 160px);
   text-align: center;
   position: relative;
 }
@@ -314,7 +318,7 @@ body {
 }
 
 .quote-container {
-  max-width: 780px;
+  max-width: 760px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -323,7 +327,7 @@ body {
 
 .quote-container p {
   font-family: 'Cormorant', serif;
-  font-size: clamp(1.4rem, 3.8vw, 2.4rem);
+  font-size: clamp(1.3rem, 3.5vw, 2.2rem);
   font-weight: 600;
   font-style: italic;
   line-height: 1.65;
@@ -332,7 +336,7 @@ body {
 
 /* SECTIONS */
 .section {
-  padding: clamp(80px, 12vw, 140px) clamp(24px, 8%, 130px);
+  padding: clamp(70px, 11vw, 130px) clamp(24px, 8%, 120px);
   position: relative;
 }
 
@@ -346,22 +350,22 @@ body {
 .section-label {
   display: inline-block;
   font-family: 'Raleway', sans-serif;
-  font-size: 0.68rem;
+  font-size: 0.66rem;
   font-weight: 500;
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--gold);
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .section-title {
   font-family: 'Bodoni Moda', serif;
-  font-size: clamp(2rem, 5vw, 3.8rem);
+  font-size: clamp(1.8rem, 4.5vw, 3.6rem);
   font-weight: 700;
   font-optical-sizing: auto;
   line-height: 1.15;
   color: var(--white);
-  margin-bottom: 36px;
+  margin-bottom: 32px;
   letter-spacing: -0.01em;
 }
 
@@ -374,11 +378,11 @@ body {
 }
 
 .section-text {
-  font-size: clamp(0.95rem, 1.8vw, 1.08rem);
+  font-size: clamp(0.92rem, 1.7vw, 1.06rem);
   line-height: 2.05;
   color: rgba(255,255,255,0.58);
   margin-bottom: 22px;
-  max-width: 650px;
+  max-width: 640px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -387,7 +391,7 @@ body {
 .story-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 80px;
+  gap: 70px;
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
@@ -405,18 +409,14 @@ body {
   transition: transform 0.8s var(--ease-apple);
 }
 
-.story-image:hover img {
-  transform: scale(1.04);
-}
+.story-image:hover img { transform: scale(1.04); }
 
 .story-content { text-align: left; }
-.story-content .section-label { margin-bottom: 18px; }
-.story-content .section-title { margin-bottom: 30px; }
+.story-content .section-label { margin-bottom: 16px; }
+.story-content .section-title { margin-bottom: 28px; }
 
 /* GALLERY */
-.gallery-section .section-inner {
-  margin-bottom: 50px;
-}
+.gallery-section .section-inner { margin-bottom: 50px; }
 
 .gallery {
   width: 100%;
@@ -444,9 +444,7 @@ body {
   cursor: zoom-in;
 }
 
-.gallery-item:hover img {
-  transform: scale(1.05);
-}
+.gallery-item:hover img { transform: scale(1.05); }
 
 /* CARDS */
 .cards {
@@ -461,7 +459,7 @@ body {
   background: rgba(255,255,255,0.03);
   border: 1px solid rgba(255,255,255,0.07);
   border-radius: 20px;
-  padding: 34px 28px;
+  padding: 32px 26px;
   text-align: left;
   position: relative;
   overflow: hidden;
@@ -493,11 +491,11 @@ body {
 
 .card-number {
   font-family: 'Bodoni Moda', serif;
-  font-size: 2.8rem;
+  font-size: 2.6rem;
   font-weight: 900;
   color: rgba(226,194,125,0.1);
   line-height: 1;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
   transition: color 0.5s var(--ease-apple);
 }
 
@@ -505,23 +503,21 @@ body {
 
 .card h3 {
   font-family: 'Bodoni Moda', serif;
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   font-weight: 700;
   color: var(--gold-soft);
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .card p {
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   line-height: 1.85;
   color: rgba(255,255,255,0.48);
   font-weight: 300;
 }
 
 /* VIDEO SECTION */
-.video-section .section-inner {
-  margin-bottom: 50px;
-}
+.video-section .section-inner { margin-bottom: 50px; }
 
 .video-wrap {
   position: relative;
@@ -593,7 +589,7 @@ body {
 .video-prompt {
   font-family: 'Cormorant', serif;
   font-style: italic;
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   font-weight: 600;
   color: rgba(255,255,255,0.72);
   letter-spacing: 0.04em;
@@ -616,7 +612,7 @@ body {
   position: relative;
   max-width: 740px;
   margin: 0 auto;
-  padding: 52px 56px;
+  padding: 50px 54px;
   border: 1px solid rgba(226,194,125,0.14);
   border-radius: 24px;
   background: rgba(255,255,255,0.02);
@@ -638,7 +634,7 @@ body {
 
 .letter {
   font-family: 'Cormorant', serif;
-  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  font-size: clamp(1.08rem, 2vw, 1.28rem);
   font-weight: 600;
   line-height: 2.1;
   color: rgba(255,255,255,0.72);
@@ -654,10 +650,10 @@ body {
 }
 
 .letter-signature {
-  margin-top: 38px;
+  margin-top: 36px;
   font-family: 'Bodoni Moda', serif;
   font-style: italic;
-  font-size: 1.2rem;
+  font-size: 1.18rem;
   font-weight: 700;
   color: var(--gold);
   text-align: right;
@@ -665,7 +661,9 @@ body {
   z-index: 1;
 }
 
-/* FINAL */
+/* =============================================
+   FIX 2 — Final section background restored
+   ============================================= */
 .final-section {
   height: 100svh;
   min-height: 520px;
@@ -679,9 +677,13 @@ body {
 .final-bg {
   position: absolute;
   inset: 0;
-  background: url('hero.jpg') center center / cover no-repeat;
+  background-image: url('hero.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
   transform: scale(1.07);
-  filter: brightness(0.3) saturate(0.55);
+  filter: brightness(0.55) saturate(0.7);
+  will-change: transform;
 }
 
 .final-overlay {
@@ -689,9 +691,9 @@ body {
   inset: 0;
   background: linear-gradient(
     to top,
-    var(--black) 0%,
-    rgba(0,0,0,0.45) 50%,
-    rgba(0,0,0,0.65) 100%
+    rgba(8,8,8,0.7) 0%,
+    rgba(0,0,0,0.3) 50%,
+    rgba(0,0,0,0.5) 100%
   );
 }
 
@@ -725,27 +727,27 @@ body {
 
 .final-content .section-label {
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .final-eyebrow {
   font-family: 'Raleway', sans-serif;
-  font-size: clamp(0.85rem, 2vw, 1.05rem);
+  font-size: clamp(0.82rem, 1.8vw, 1rem);
   font-weight: 300;
   letter-spacing: 0.14em;
-  color: rgba(255,255,255,0.5);
-  margin-bottom: 24px;
+  color: rgba(255,255,255,0.55);
+  margin-bottom: 22px;
 }
 
 .final-title {
   font-family: 'Bodoni Moda', serif;
-  font-size: clamp(3.2rem, 10vw, 8rem);
+  font-size: clamp(2.8rem, 9vw, 7.5rem);
   font-weight: 900;
   font-optical-sizing: auto;
   line-height: 1.06;
   color: var(--white);
   letter-spacing: -0.02em;
-  margin-bottom: 28px;
+  margin-bottom: 26px;
 }
 
 .final-title em {
@@ -761,13 +763,13 @@ body {
   font-family: 'Cormorant', serif;
   font-style: italic;
   font-weight: 600;
-  font-size: clamp(1.1rem, 2.2vw, 1.4rem);
-  color: rgba(255,255,255,0.45);
-  margin-bottom: 30px;
+  font-size: clamp(1rem, 2vw, 1.35rem);
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 28px;
 }
 
 .final-heart {
-  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-size: clamp(2rem, 5vw, 3.2rem);
   animation: heartbeat 1.6s var(--ease-spring) infinite;
   display: block;
 }
@@ -781,33 +783,35 @@ body {
 @media (max-width: 900px) {
   .story-section {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 36px;
   }
   .story-content { text-align: center; }
 }
 
 @media (max-width: 768px) {
-  .music-wrapper   { bottom: 20px; right: 14px; }
-  .music-indicator { max-width: 200px; font-size: 0.78rem; padding: 11px 14px; }
-  .gallery-track   { columns: 2 130px; gap: 10px; }
-  .gallery-item    { margin-bottom: 10px; }
-  .gallery         { padding: 0 20px; }
-  .cards           { grid-template-columns: 1fr 1fr; gap: 12px; }
-  .card            { padding: 22px 18px; }
-  .letter-wrap     { padding: 36px 24px; }
-  .letter          { font-size: 1.05rem; line-height: 2; }
-  .letter-ornament { font-size: 4rem; }
-  .quote-container p { font-size: clamp(1.2rem, 5vw, 1.7rem); }
-  .video-wrap      { border-radius: 18px; }
+  .music-wrapper    { bottom: 18px; right: 14px; }
+  .music-indicator  { max-width: 195px; font-size: 0.78rem; padding: 10px 13px; }
+  .hero-title       { font-size: clamp(1.6rem, 6.5vw, 2.8rem); }
+  .gallery-track    { columns: 2 130px; gap: 10px; }
+  .gallery-item     { margin-bottom: 10px; }
+  .gallery          { padding: 0 20px; }
+  .cards            { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .card             { padding: 20px 16px; }
+  .letter-wrap      { padding: 34px 22px; }
+  .letter           { font-size: 1rem; line-height: 2; }
+  .letter-ornament  { font-size: 3.8rem; }
+  .quote-container p { font-size: clamp(1.15rem, 4.5vw, 1.6rem); }
+  .video-wrap       { border-radius: 18px; }
   .video-wrap video { border-radius: 18px; }
-  .play-btn        { width: 68px; height: 68px; }
-  .play-btn span   { font-size: 1.5rem; }
+  .play-btn         { width: 68px; height: 68px; }
+  .play-btn span    { font-size: 1.5rem; }
 }
 
 @media (max-width: 480px) {
-  .cards         { grid-template-columns: 1fr; }
-  .gallery-track { columns: 2 100px; }
-  .letter-wrap   { padding: 28px 18px; }
+  .cards            { grid-template-columns: 1fr; }
+  .gallery-track    { columns: 2 100px; }
+  .letter-wrap      { padding: 26px 16px; }
+  .hero-title       { font-size: clamp(1.5rem, 7vw, 2.2rem); }
 }
 
 ::selection {
